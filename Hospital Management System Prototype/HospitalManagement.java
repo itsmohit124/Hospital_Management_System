@@ -9,31 +9,24 @@ class Employee
     int salary;
     void new_emp()
     {
-        Scanner input = new Scanner(System.in);
 
-        System.out.print("id:-");
-        eid = input.nextLine();
+        eid = JOptionPane.showInputDialog("Enter employee id:-");
 
-        System.out.print("name:-");
-        ename = input.nextLine();
+        ename = JOptionPane.showInputDialog("Enter employee name:-");
 
-        System.out.print("desigination:-");
-        desg = input.nextLine();
+        desg = JOptionPane.showInputDialog("Enter employee desigination:-");
 
-        System.out.print("sex:-");
-        sex = input.nextLine();
+        sex = JOptionPane.showInputDialog("Enter sex:-");
 
-        System.out.println("password:-");
-        epassword=input.nextLine();
+        epassword = JOptionPane.showInputDialog("Enter password:-");
 
-        System.out.print("salary:-");
-        salary = input.nextInt();
+        salary =(Integer.parseInt(JOptionPane.showInputDialog("Enter Salary:-")));
     }
 
     void emp_info()
 
     {
-        System.out.println(eid + "\t\t" + ename + "\t\t" + sex + "\t\t" + salary);
+        JOptionPane.showMessageDialog(null,"id    Name    Gender    Salary\n"+eid + "    " + ename + "    " + sex + "    " + salary);
     }
 
 }
@@ -43,29 +36,23 @@ class PaymentReceipt
     float Amount;
     void new_receipt()
     {
-        Scanner input = new Scanner(System.in);
 
-        System.out.print("Payment id:-");
-        Payid = input.nextLine();
+        Payid = JOptionPane.showInputDialog("Enter payment id:-");
 
-        System.out.print("Patient id:-");
-        pid = input.nextLine();
+        pid = JOptionPane.showInputDialog("Enter patient id:-");
 
-        System.out.print("patient name:-");
-        pname = input.nextLine();
+        pname  = JOptionPane.showInputDialog("Enter patient name:-");
 
-        System.out.print("Types of test performed:-");
-        type_of_test = input.nextLine();
+        type_of_test = JOptionPane.showInputDialog("Enter types of test performed:-");
 
-        System.out.print("Total payment amount:-");
-        Amount=input.nextFloat();
+        Amount =(Float.parseFloat(JOptionPane.showInputDialog("Enter total payment amount:-")));
 
     }
 
     void receipt_info()
 
     {
-        System.out.println(Payid + "\t\t\t\t\t" + pid + "\t\t\t\t\t" + pname + "\t\t\t" + type_of_test + "\t\t" + Amount);
+        JOptionPane.showMessageDialog(null, "Payment Id    Patient Id    Patient Name    Type Of Tests    Total Treatment Amount\n"+Payid + "        " + pid + "         " + pname + "     " + type_of_test + "       " + Amount);
     }
 
 }
@@ -75,34 +62,25 @@ class MedicalReport
     String rid,dname,pid,pname,type_of_test,disease,Meds;
 
     void new_med_rep(){
-        Scanner input = new Scanner(System.in);
 
-        System.out.print("Enetr the report id:-");
-        rid=input.nextLine();
+        rid = JOptionPane.showInputDialog("Enter the report id:-");
 
-        System.out.print("Enter name of doctor incharge:-");
-        dname = input.nextLine();
+        dname  = JOptionPane.showInputDialog("Enter name of doctor incharge:-");
 
-        System.out.print("Patient id:-");
-        pid = input.nextLine();
+        pid = JOptionPane.showInputDialog("Enter patient id:-");
 
-        System.out.print("patient name:-");
-        pname = input.nextLine();
+        pname  = JOptionPane.showInputDialog("Enter patient name:-");
 
-        System.out.print("Types of test performed:-");
-        type_of_test = input.nextLine();
+        type_of_test = JOptionPane.showInputDialog("Enter types of test performed:-");
 
-        System.out.print("Enter the type of disease patient have:-");
-        disease=input.nextLine();
+        disease = JOptionPane.showInputDialog("Enter the type of disease patient have:-");
 
-        System.out.print("Enter the name of medicines prescribed:-");
-         Meds=input.nextLine();
-
+        Meds = JOptionPane.showInputDialog("Enter the name of medicines prescribed:-");
 
     }
 
     void report_info(){
-        System.out.println(rid+"\t\t\t\t\t" + pid + "\t\t\t\t\t" + pname + "\t\t\t" + disease + "\t\t" + type_of_test+ "\t\t" +dname+"\t\t"+Meds);
+        JOptionPane.showMessageDialog(null, "Report Id    Patient Id    Patient Name     Disease     Type Of Tests     Doctor Incharge     Madicines Prescribed\n"+rid+"      " + pid + "      " + pname + "     " + disease + "     " + type_of_test+ "    " +dname+"    "+Meds);
     }
 
 }
@@ -115,36 +93,27 @@ class doctor
     void new_doctor()
 
     {
-        Scanner input = new Scanner(System.in);
 
-        System.out.print("id:-");
-        did = input.nextLine();
+        did  = JOptionPane.showInputDialog("Enter doctor id:-");
 
-        System.out.print("name:-");
-        dname = input.nextLine();
+        dname  = JOptionPane.showInputDialog("Enter name of doctor:-");
 
-        System.out.print("specilization:-");
-        specilist = input.nextLine();
+        specilist  = JOptionPane.showInputDialog("Enter specialization of doctor:-");
 
-        System.out.print("work time:-");
-        appoint = input.nextLine();
+        appoint  = JOptionPane.showInputDialog("Enter work time of doctor:-");
 
-        System.out.print("qualification:-");
-        doc_qual = input.nextLine();
+        doc_qual  = JOptionPane.showInputDialog("Enter qualification of doctor:-");
 
-        System.out.print("password:-");
-        dpassword=input.nextLine();
+        dpassword  = JOptionPane.showInputDialog("Enter password:-");
 
-        System.out.print("room no.:-");
-        droom = input.nextInt();
+        droom =(Integer.parseInt(JOptionPane.showInputDialog("Enter room no:-")));
 
     }
 
     void doctor_info()
 
     {
-        System.out.println(did + "\t\t" + dname + "  \t\t" + specilist + "     \t\t" + appoint + "    \t\t" + doc_qual + "       \t\t" + droom);
-
+        JOptionPane.showMessageDialog(null,"id     Name    Specilist     Timing     Qualification     Room No.\n\n"+did + "    " + dname + "    " + specilist + "    " + appoint + "    " + doc_qual + "    " + droom);
     }
 }
 
@@ -156,34 +125,26 @@ class patient
     void new_patient()
 
     {
-        Scanner input = new Scanner(System.in);
 
-        System.out.print("id:-");
-        pid = input.nextLine();
+        pid = JOptionPane.showInputDialog("Enter patient id:-");
 
-        System.out.print("name:-");
-        pname = input.nextLine();
+        pname  = JOptionPane.showInputDialog("Enter patient name:-");
 
-        System.out.print("disease:-");
-        disease = input.nextLine();
+        disease = JOptionPane.showInputDialog("Enter the type of disease patient have:-");
 
-        System.out.print("sex:-");
-        sex = input.nextLine();
+        sex = JOptionPane.showInputDialog("Enter sex:-");
 
-        System.out.print("admit_status:-");
-        admit_status = input.nextLine();
+        admit_status = JOptionPane.showInputDialog("Enter admit_status:-");
 
-        System.out.print("password:-");
-        ppassword=input.nextLine();
+        ppassword = JOptionPane.showInputDialog("Enter password:-");
 
-        System.out.print("age:-");
-        age = input.nextInt();
+        age =(Integer.parseInt(JOptionPane.showInputDialog("Enter age:-")));
 
     }
 
     void patient_info()
     {
-        System.out.println(pid + "\t\t" + pname + " \t\t" + disease + "     \t\t" + sex + "      \t\t" + admit_status + "\t\t" + age);
+        JOptionPane.showMessageDialog(null,"id    Name     Disease     Gender    Admit Status     Age\n"+pid + "   " + pname + "    " + disease + "     " + sex + "         " + admit_status + "        " + age);
     }
 }
 
@@ -195,28 +156,21 @@ class medical
     void new_medi()
     {
 
-        Scanner input = new Scanner(System.in);
+        med_name  = JOptionPane.showInputDialog("Enter medicine name:-");
 
-        System.out.print("name:-");
-        med_name = input.nextLine();
+        med_comp  = JOptionPane.showInputDialog("Enter composition of medicine:-");
 
-        System.out.print("comp:-");
-        med_comp = input.nextLine();
+        exp_date  = JOptionPane.showInputDialog("Enter exp_date of medicine:-");
 
-        System.out.print("exp_date:-");
-        exp_date = input.nextLine();
+        med_cost =(Integer.parseInt(JOptionPane.showInputDialog("Enter cost of medicine:-")));
 
-        System.out.print("cost:-");
-        med_cost = input.nextInt();
-
-        System.out.print("no of unit:-");
-        count = input.nextInt();
+        count =(Integer.parseInt(JOptionPane.showInputDialog("Enter no of unit:-")));
 
     }
 
     void find_medi()
     {
-        System.out.println(med_name + "  \t\t" + med_comp + "    \t\t" + exp_date + "     \t\t" + med_cost);
+        JOptionPane.showMessageDialog(null,"Name    Company    Expiry Date  Cost\n"+med_name + "    " + med_comp + "     " + exp_date + "      " + med_cost);
     }
 }
 
@@ -227,39 +181,32 @@ class lab
     int lab_cost;
     void new_feci()
     {
-        Scanner input = new Scanner(System.in);
 
-        System.out.print("fecility:-");
-        fecility = input.nextLine();
+        fecility  = JOptionPane.showInputDialog("Enter facility name:-");
 
-        System.out.print("cost:-");
-        lab_cost = input.nextInt();
+        lab_cost =(Integer.parseInt(JOptionPane.showInputDialog("Enter cost of facility:-")));
 
     }
 
     void feci_list()
     {
-        System.out.println(fecility + "\t\t" + lab_cost);
-
+        JOptionPane.showMessageDialog(null,"Fecilities    Cost\n"+fecility + "    " + lab_cost);
     }
 }
 
-class fecility //Sorry Facility but do not change the name 
+class fecility
 
 {
     String fec_name;
     void add_feci()
 
     {
-        Scanner input = new Scanner(System.in);
-
-        System.out.print("fecility:-");
-        fec_name = input.nextLine();
+        fec_name  = JOptionPane.showInputDialog("Enter facility name:-");
     }
 
     void show_feci()
     {
-        System.out.println(fec_name);
+        JOptionPane.showMessageDialog(null,"Fecilities\n"+fec_name);
     }
 }
 
@@ -553,7 +500,7 @@ public class HospitalManagement
         int count1 = 4, count2 = 4, count3 = 4, count4 = 4, count5 = 4, count6 = 4,count7=4,count8=4;
         int  j;
         boolean  status1=true,status = true ,s1 = true,s2=true,s3 = true, s4 = true,s5 = true ,s6 = true,log=false;
-        int []arr={count1,count2,count3,count4,count5,count6};
+        int []arr={count1,count2,count3,count4,count5,count6,count7,count8};
         String[] SelectionTypes = {"Doctor","Patient", "Employee","Admin","exit"};
             while (status)
 
@@ -570,6 +517,9 @@ public class HospitalManagement
                             if (user.equals(d[j].did)&&pass.equals(d[j].dpassword)){
                                 log=true;
                             }
+                            else{
+                                log=false;
+                            }
                         }
                     }if (log) {
                     JOptionPane.showMessageDialog(null, "Login successful!");
@@ -580,54 +530,30 @@ public class HospitalManagement
 
 
                         if (SelectionTypeDoc.equals("Doctor")) {
-                            JOptionPane.showMessageDialog(null,"Enter zero for more options");
-                            System.out.println("--------------------------------------------------------------------------------");
-                            System.out.println("id \t\t Name\t\t Specilist \t\t Timing \t\t Qualification \t\t Room No.");
-                            System.out.println("--------------------------------------------------------------------------------");
                             for (j = 0; j < count1; j++) {
                                 d[j].doctor_info();
                             }
-                            int x = in.nextInt();
                         } else if (SelectionTypeDoc.equals("Patient")) {
-                            JOptionPane.showMessageDialog(null,"Enter zero for more options");
-                            System.out.println("--------------------------------------------------------------------------------");
-                            System.out.println("id \t\t Name \t\t Disease \t\t Gender \t\t Admit Status \t\t Age");
-                            System.out.println("--------------------------------------------------------------------------------");
                             for (j = 0; j < count2; j++) {
                                 p[j].patient_info();
-                            }int x=in.nextInt();
+                            }
                         }
                         else if (SelectionTypeDoc.equals("Medicines")) {
-                            JOptionPane.showMessageDialog(null,"Enter zero for more options");
-                            System.out.println("--------------------------------------------------------------------------------");
-                            System.out.println("Name \t\t Company \t\t Expiry Date \t\t Cost");
-                            System.out.println("--------------------------------------------------------------------------------");
-
                             for (j = 0; j < count3; j++) {
                                 m[j].find_medi();
-                            }int x=in.nextInt();
+                            }
                         }
                         else if (SelectionTypeDoc.equals("Laboratories")) {
-                            JOptionPane.showMessageDialog(null,"Enter zero for more options");
-                            System.out.println("--------------------------------------------------------------------------------");
-                            System.out.println("Fecilities\t\t Cost");
-                            System.out.println("--------------------------------------------------------------------------------");
-
                             for (j = 0; j < count4; j++) {
                                 l[j].feci_list();
-                            }int x=in.nextInt();
+                            }
                         }
                         else if (SelectionTypeDoc.equals("Employee")) {
-                            JOptionPane.showMessageDialog(null,"Enter zero for more options");
-                            System.out.println("--------------------------------------------------------------------------------");
-                            System.out.println("id \t\t Name \t\t Gender \t\t Salary");
-                            System.out.println("--------------------------------------------------------------------------------");
-
                             for (j = 0; j < count6; j++)
                             {
                                 if ("Nurse".equals(s[j].desg))
                                     s[j].emp_info();
-                            }int x=in.nextInt();
+                            }
                         }
                         else if (SelectionTypeDoc.equals("Medical Report")) {
                             int option1 = JOptionPane.showOptionDialog(null, "Generate or view Report?",
@@ -635,15 +561,10 @@ public class HospitalManagement
                                     null, new String[]{"Show Report", "Generate Report"}, "Show Report");
                             if (option1 == JOptionPane.YES_OPTION) {
                                 String Ptid = JOptionPane.showInputDialog("Enter Patient id:");
-                                JOptionPane.showMessageDialog(null, "Enter zero for more options");
-                                System.out.println("--------------------------------------------------------------------------------");
-                                System.out.println("Report Id \t\t Patient Id \t\t Patient Name \t\t Disease \t\t Type Of Tests \t\t Doctor Incharge \t\t Madicines Prescribed");
-                                System.out.println("--------------------------------------------------------------------------------");
                                 for (j = 0; j < count7; j++) {
                                     if (Ptid.equals(mr[j].pid))
                                         mr[j].report_info();
                                 }
-                                int x = in.nextInt();
                             }
                             else{
                                 mr[count7].new_med_rep();
@@ -677,6 +598,9 @@ public class HospitalManagement
                             if (user.equals(p[j].pid)&&pass.equals(p[j].ppassword)){
                                 log=true;
                             }
+                            else{
+                                log=false;
+                            }
                         }
                     }if (log) {
                     JOptionPane.showMessageDialog(null, "Login successful!");
@@ -687,77 +611,43 @@ public class HospitalManagement
 
 
                         if (SelectionTypeDoc.equals("Doctor")) {
-                            JOptionPane.showMessageDialog(null,"Enter zero for more options");
-                            System.out.println("--------------------------------------------------------------------------------");
-                            System.out.println("id \t\t Name\t\t Specilist \t\t Timing \t\t Qualification \t\t Room No.");
-                            System.out.println("--------------------------------------------------------------------------------");
                             for (j = 0; j < count1; j++) {
                                 d[j].doctor_info();
                             }
-                            int x = in.nextInt();
                         } else if (SelectionTypeDoc.equals("Patient")) {
-                            JOptionPane.showMessageDialog(null,"Enter zero for more options");
-                            System.out.println("--------------------------------------------------------------------------------");
-                            System.out.println("id \t\t Name \t\t Disease \t\t Gender \t\t Admit Status \t\t Age");
-                            System.out.println("--------------------------------------------------------------------------------");
                             for (j = 0; j < count2; j++) {
                                 if (user.equals(p[j].pid))
                                     p[j].patient_info();
-                            }int x=in.nextInt();
+                            }
                         }
                         else if (SelectionTypeDoc.equals("Medicines")) {
-                            JOptionPane.showMessageDialog(null,"Enter zero for more options");
-                            System.out.println("--------------------------------------------------------------------------------");
-                            System.out.println("Name \t\t Company \t\t Expiry Date \t\t Cost");
-                            System.out.println("--------------------------------------------------------------------------------");
-
                             for (j = 0; j < count3; j++) {
                                 m[j].find_medi();
-                            }int x=in.nextInt();
+                            }
                         }
                         else if (SelectionTypeDoc.equals("Laboratories")) {
-                            JOptionPane.showMessageDialog(null,"Enter zero for more options");
-                            System.out.println("--------------------------------------------------------------------------------");
-                            System.out.println("Fecilities\t\t Cost");
-                            System.out.println("--------------------------------------------------------------------------------");
-
                             for (j = 0; j < count4; j++) {
                                 l[j].feci_list();
-                            }int x=in.nextInt();
+                            }
                         }
                         else if (SelectionTypeDoc.equals("Employee")) {
-                            JOptionPane.showMessageDialog(null,"Enter zero for more options");
-                            System.out.println("--------------------------------------------------------------------------------");
-                            System.out.println("id \t\t Name \t\t Gender \t\t Salary");
-                            System.out.println("--------------------------------------------------------------------------------");
-
                             for (j = 0; j < count6; j++)
                             {
                                 if ("Nurse".equals(s[j].desg))
                                     s[j].emp_info();
-                            }int x=in.nextInt();
+                            }
                         }
                         else if (SelectionTypeDoc.equals("Medical Report")) {
-                                JOptionPane.showMessageDialog(null, "Enter zero for more options");
-                                System.out.println("--------------------------------------------------------------------------------");
-                                System.out.println("Report Id \t\t Patient Id \t\t Patient Name \t\t Disease \t\t Type Of Tests \t\t Doctor Incharge \t\t Madicines Prescribed");
-                                System.out.println("--------------------------------------------------------------------------------");
                                 for (j = 0; j < count7; j++) {
                                     if (user.equals(mr[j].pid))
                                         mr[j].report_info();
                                 }
-                                int x = in.nextInt();
                         }
                         if (SelectionTypeDoc.equals("Payment Receipt")) {
-                            JOptionPane.showMessageDialog(null, "Enter zero for more options");
-                            System.out.println("--------------------------------------------------------------------------------");
-                            System.out.println("Payment Id \t\t Patient Id \t\t Patient Name \t\t Type Of Tests \t\t Total Treatment Amount");
-                            System.out.println("--------------------------------------------------------------------------------");
                             for (j = 0; j < count7; j++) {
                                 if (user.equals(pay[j].pid))
                                     pay[j].receipt_info();
                             }
-                            int x = in.nextInt();
                         }
                         int option1 = JOptionPane.showOptionDialog(null, "Back to menu?",
                                 "Hospital Management System", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE,
@@ -786,11 +676,14 @@ public class HospitalManagement
                             if (user.equals(s[j].eid)&&pass.equals(s[j].epassword)){
                                 log=true;
                             }
+                            else{
+                                log=false;
+                            }
                         }
                     }if (log) {
                     while (s6) {
                         JOptionPane.showMessageDialog(null, "Login successful!");
-                        String[] Selection = {"Patient", "Nurse", "Worker", "Security","Medicines", "Laboratories", "Facilities","Payment Receipt"};
+                        String[] Selection = {"Patient", "Nurse", "Worker", "Security","Medicines", "Laboratories", "Facilities","Payment Receipt","Medical Report"};
                         String optionEmp = (String) JOptionPane.showInputDialog(null, "Select your Option:",
                                 "Hospital Management System", JOptionPane.QUESTION_MESSAGE, null, Selection, Selection[0]);
 
@@ -806,14 +699,9 @@ public class HospitalManagement
                                     count2++;
                                     JOptionPane.showMessageDialog(null, "Credentials Added Succesfully");
                                 } else {
-                                    JOptionPane.showMessageDialog(null, "Enter zero for more options");
-                                    System.out.println("--------------------------------------------------------------------------------");
-                                    System.out.println("id \t\t Name \t\t Disease \t\t Gender \t\t Admit Status \t\t Age");
-                                    System.out.println("--------------------------------------------------------------------------------");
                                     for (j = 0; j < count2; j++) {
                                         p[j].patient_info();
                                     }
-                                    int x = in.nextInt();
                                 }
 
                                 int option1 = JOptionPane.showOptionDialog(null, "Back to menu?",
@@ -826,38 +714,27 @@ public class HospitalManagement
                                 }
                             }
                         } else if (optionEmp.equals("Nurse")) {
-                            JOptionPane.showMessageDialog(null, "Enter zero for more options");
-                            System.out.println("--------------------------------------------------------------------------------");
-                            System.out.println("id \t\t Name \t\t Gender \t\t Salary");
-                            System.out.println("--------------------------------------------------------------------------------");
-
                             for (j = 0; j < count6; j++) {
                                 if (optionEmp.equals(s[j].desg))
                                     s[j].emp_info();
                             }
-                            int x = in.nextInt();
                         } else if (optionEmp.equals("Worker")) {
-                            JOptionPane.showMessageDialog(null, "Enter zero for more options");
-                            System.out.println("--------------------------------------------------------------------------------");
-                            System.out.println("id \t\t Name \t\t Gender \t\t Salary");
-                            System.out.println("--------------------------------------------------------------------------------");
-
                             for (j = 0; j < count6; j++) {
                                 if (optionEmp.equals(s[j].desg))
                                     s[j].emp_info();
                             }
-                            int x = in.nextInt();
                         } else if (optionEmp.equals("Security")){
-                            JOptionPane.showMessageDialog(null, "Enter zero for more options");
-                            System.out.println("--------------------------------------------------------------------------------");
-                            System.out.println("id \t\t Name \t\t Gender \t\t Salary");
-                            System.out.println("--------------------------------------------------------------------------------");
-
-                            for (j = 0; j < count6; j++) {
+                           for (j = 0; j < count6; j++) {
                                 if (optionEmp.equals(s[j].desg))
                                     s[j].emp_info();
                             }
-                            int x = in.nextInt();
+                        }
+                        else if (optionEmp.equals("Medical Report")){
+                            String Ptid = JOptionPane.showInputDialog("Enter Patient id:");
+                            for (j = 0; j < count7; j++) {
+                                if (Ptid.equals(mr[j].pid))
+                                    mr[j].report_info();
+                            }
                         }
                         if (optionEmp.equals("Payment Receipt")) {
                             int option = JOptionPane.showOptionDialog(null, "Generate or View Payment Receipt?",
@@ -871,15 +748,10 @@ public class HospitalManagement
                                 JOptionPane.showMessageDialog(null, "Credentials Added Succesfully");
                             } else {
                                 String Ptid = JOptionPane.showInputDialog("Enter Patient id:");
-                                JOptionPane.showMessageDialog(null, "Enter zero for more options");
-                                System.out.println("--------------------------------------------------------------------------------");
-                                System.out.println("Payment Id \t\t Patient Id \t\t Patient Name \t\t Type Of Tests \t\t Total Treatment Amount");
-                                System.out.println("--------------------------------------------------------------------------------");
                                 for (j = 0; j < count7; j++) {
                                     if (Ptid.equals(pay[j].pid))
                                         pay[j].receipt_info();
                                 }
-                                int x = in.nextInt();
                             }
                         }
                         else if (optionEmp.equals("Medicines")){
@@ -894,15 +766,9 @@ public class HospitalManagement
                                     count3++;
                                     JOptionPane.showMessageDialog(null, "Credentials Added Succesfully");
                                 } else {
-                                    JOptionPane.showMessageDialog(null, "Enter zero for more options");
-                                    System.out.println("--------------------------------------------------------------------------------");
-                                    System.out.println("Name \t\t Company \t\t Expiry Date \t\t Cost");
-                                    System.out.println("--------------------------------------------------------------------------------");
-
                                     for (j = 0; j < count3; j++) {
                                         m[j].find_medi();
                                     }
-                                    int x = in.nextInt();
                                 }
 
                                 int option1 = JOptionPane.showOptionDialog(null, "Back to menu?",
@@ -926,15 +792,9 @@ public class HospitalManagement
                                     count4++;
                                     JOptionPane.showMessageDialog(null, "Credentials Added Succesfully");
                                 } else {
-                                    JOptionPane.showMessageDialog(null, "Enter zero for more options");
-                                    System.out.println("--------------------------------------------------------------------------------");
-                                    System.out.println("Fecilities\t\t Cost");
-                                    System.out.println("--------------------------------------------------------------------------------");
-
                                     for (j = 0; j < count4; j++) {
                                         l[j].feci_list();
                                     }
-                                    int x = in.nextInt();
                                 }
 
                                 int option1 = JOptionPane.showOptionDialog(null, "Back to menu?",
@@ -958,15 +818,9 @@ public class HospitalManagement
                                     count5++;
                                     JOptionPane.showMessageDialog(null, "Credentials Added Succesfully");
                                 } else {
-                                    JOptionPane.showMessageDialog(null, "Enter zero for more options");
-                                    System.out.println("--------------------------------------------------------------------------------");
-                                    System.out.println("Hospital  Facility are:");
-                                    System.out.println("--------------------------------------------------------------------------------");
-
                                     for (j = 0; j < count5; j++) {
                                         f[j].show_feci();
                                     }
-                                    int x = in.nextInt();
                                 }
 
                                 int option1 = JOptionPane.showOptionDialog(null, "Back to menu?",
@@ -1001,6 +855,9 @@ public class HospitalManagement
                             if (user.equals(Aid) && pass.equals(Apassword)) {
                                 log = true;
                             }
+                            else{
+                                log=false;
+                            }
                     if (log) {
                         JOptionPane.showMessageDialog(null, "Login successful!");
                         String[] SelectionTypesAdmin = {"Doctor", "Patient", "Medicines", "Laboratories", "Facilities", "Employee", "Admin Info and Change Option","Medical Report","Payment Receipt", "exit"};
@@ -1020,14 +877,9 @@ public class HospitalManagement
                                         count1++;
                                         JOptionPane.showMessageDialog(null, "Credentials Added Succesfully");
                                     } else {
-                                        JOptionPane.showMessageDialog(null, "Enter zero for more options");
-                                        System.out.println("--------------------------------------------------------------------------------");
-                                        System.out.println("id \t\t Name\t\t Specilist \t\t Timing \t\t Qualification \t\t Room No.");
-                                        System.out.println("--------------------------------------------------------------------------------");
                                         for (j = 0; j < count1; j++) {
                                             d[j].doctor_info();
                                         }
-                                        int x = in.nextInt();
                                     }
 
                                     int option1 = JOptionPane.showOptionDialog(null, "Back to menu?",
@@ -1051,14 +903,9 @@ public class HospitalManagement
                                         count2++;
                                         JOptionPane.showMessageDialog(null, "Credentials Added Succesfully");
                                     } else {
-                                        JOptionPane.showMessageDialog(null, "Enter zero for more options");
-                                        System.out.println("--------------------------------------------------------------------------------");
-                                        System.out.println("id \t\t Name \t\t Disease \t\t Gender \t\t Admit Status \t\t Age");
-                                        System.out.println("--------------------------------------------------------------------------------");
                                         for (j = 0; j < count2; j++) {
                                             p[j].patient_info();
                                         }
-                                        int x = in.nextInt();
                                     }
 
                                     int option1 = JOptionPane.showOptionDialog(null, "Back to menu?",
@@ -1082,15 +929,9 @@ public class HospitalManagement
                                         count3++;
                                         JOptionPane.showMessageDialog(null, "Credentials Added Succesfully");
                                     } else {
-                                        JOptionPane.showMessageDialog(null, "Enter zero for more options");
-                                        System.out.println("--------------------------------------------------------------------------------");
-                                        System.out.println("Name \t\t Company \t\t Expiry Date \t\t Cost");
-                                        System.out.println("--------------------------------------------------------------------------------");
-
                                         for (j = 0; j < count3; j++) {
                                             m[j].find_medi();
                                         }
-                                        int x = in.nextInt();
                                     }
 
                                     int option1 = JOptionPane.showOptionDialog(null, "Back to menu?",
@@ -1114,15 +955,9 @@ public class HospitalManagement
                                         count4++;
                                         JOptionPane.showMessageDialog(null, "Credentials Added Succesfully");
                                     } else {
-                                        JOptionPane.showMessageDialog(null, "Enter zero for more options");
-                                        System.out.println("--------------------------------------------------------------------------------");
-                                        System.out.println("Fecilities\t\t Cost");
-                                        System.out.println("--------------------------------------------------------------------------------");
-
-                                        for (j = 0; j < count4; j++) {
+                                       for (j = 0; j < count4; j++) {
                                             l[j].feci_list();
-                                        }
-                                        int x = in.nextInt();
+                                       }
                                     }
 
                                     int option1 = JOptionPane.showOptionDialog(null, "Back to menu?",
@@ -1146,15 +981,10 @@ public class HospitalManagement
                                         count5++;
                                         JOptionPane.showMessageDialog(null, "Credentials Added Succesfully");
                                     } else {
-                                        JOptionPane.showMessageDialog(null, "Enter zero for more options");
-                                        System.out.println("--------------------------------------------------------------------------------");
-                                        System.out.println("Hospital  Facility are:");
-                                        System.out.println("--------------------------------------------------------------------------------");
-
-                                        for (j = 0; j < count5; j++) {
+                                       for (j = 0; j < count5; j++) {
                                             f[j].show_feci();
-                                        }
-                                        int x = in.nextInt();
+                                       }
+
                                     }
 
                                     int option1 = JOptionPane.showOptionDialog(null, "Back to menu?",
@@ -1177,38 +1007,20 @@ public class HospitalManagement
                                         count6++;
                                         JOptionPane.showMessageDialog(null, "Credentials Added Succesfully");
                                     } else if (option.equals("Nurse")) {
-                                        JOptionPane.showMessageDialog(null, "Enter zero for more options");
-                                        System.out.println("--------------------------------------------------------------------------------");
-                                        System.out.println("id \t\t Name \t\t Gender \t\t Salary");
-                                        System.out.println("--------------------------------------------------------------------------------");
-
                                         for (j = 0; j < count6; j++) {
                                             if (option.equals(s[j].desg))
                                                 s[j].emp_info();
                                         }
-                                        int x = in.nextInt();
                                     } else if (option.equals("Worker")) {
-                                        JOptionPane.showMessageDialog(null, "Enter zero for more options");
-                                        System.out.println("--------------------------------------------------------------------------------");
-                                        System.out.println("id \t\t Name \t\t Gender \t\t Salary");
-                                        System.out.println("--------------------------------------------------------------------------------");
-
                                         for (j = 0; j < count6; j++) {
                                             if (option.equals(s[j].desg))
                                                 s[j].emp_info();
                                         }
-                                        int x = in.nextInt();
                                     } else {
-                                        JOptionPane.showMessageDialog(null, "Enter zero for more options");
-                                        System.out.println("--------------------------------------------------------------------------------");
-                                        System.out.println("id \t\t Name \t\t Gender \t\t Salary");
-                                        System.out.println("--------------------------------------------------------------------------------");
-
-                                        for (j = 0; j < count6; j++) {
+                                       for (j = 0; j < count6; j++) {
                                             if (option.equals(s[j].desg))
                                                 s[j].emp_info();
                                         }
-                                        int x = in.nextInt();
                                     }
 
                                     int option1 = JOptionPane.showOptionDialog(null, "Back to menu?",
@@ -1225,12 +1037,7 @@ public class HospitalManagement
                                         "Hospital Management System", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE,
                                         null, new String[]{"View Info", "Change Admin"}, "Last menu");
                                 if (option1 == JOptionPane.YES_OPTION) {
-                                    JOptionPane.showMessageDialog(null, "Enter zero for more options");
-                                    System.out.println("--------------------------------------------------------------------------------");
-                                    System.out.println("Admin id \t\t AdminName \t\t Gender \t\t Salary");
-                                    System.out.println("--------------------------------------------------------------------------------");
-                                    System.out.println(Aid + "\t\t\t" + Aname + "\t\t\t" + sex + "\t\t\t" + salary);
-                                    int x=in.nextInt();
+                                    JOptionPane.showMessageDialog(null, "Admin id     AdminName     Gender     Salary\n"+Aid + "         " + Aname + "         " + sex + "          " + salary);
                                 } else {
                                     Aid = JOptionPane.showInputDialog("Enter Admin id:");
                                     Aname =JOptionPane.showInputDialog("Enter Admin Name:");
@@ -1253,28 +1060,18 @@ public class HospitalManagement
                                     JOptionPane.showMessageDialog(null, "Credentials Added Succesfully");
                                 } else {
                                     String Ptid = JOptionPane.showInputDialog("Enter Patient id:");
-                                    JOptionPane.showMessageDialog(null, "Enter zero for more options");
-                                    System.out.println("--------------------------------------------------------------------------------");
-                                    System.out.println("Payment Id \t\t Patient Id \t\t Patient Name \t\t Type Of Tests \t\t Total Treatment Amount");
-                                    System.out.println("--------------------------------------------------------------------------------");
                                     for (j = 0; j < count7; j++) {
                                         if (Ptid.equals(pay[j].pid))
                                             pay[j].receipt_info();
                                     }
-                                    int x = in.nextInt();
                                 }
                             }
                             else if (SelectionTypeAdmin.equals("Medical Report")) {
                                 String Ptid = JOptionPane.showInputDialog("Enter Patient id:");
-                                JOptionPane.showMessageDialog(null, "Enter zero for more options");
-                                System.out.println("--------------------------------------------------------------------------------");
-                                System.out.println("Report Id \t\t Patient Id \t\t Patient Name \t\t Disease \t\t Type Of Tests \t\t Doctor Incharge \t\t Madicines Prescribed");
-                                System.out.println("--------------------------------------------------------------------------------");
                                 for (j = 0; j < count7; j++) {
                                     if (Ptid.equals(mr[j].pid))
                                         mr[j].report_info();
                                 }
-                                int x = in.nextInt();
                             }
                             else {
                                 status1 = false;
