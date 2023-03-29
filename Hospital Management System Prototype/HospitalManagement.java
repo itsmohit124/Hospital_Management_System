@@ -499,12 +499,13 @@ public class HospitalManagement
 
         int count1 = 4, count2 = 4, count3 = 4, count4 = 4, count5 = 4, count6 = 4,count7=4,count8=4;
         int  j;
-        boolean  status1=true,status = true ,s1 = true,s2=true,s3 = true, s4 = true,s5 = true ,s6 = true,log=false;
+        boolean  status1=true,status = true ,s1 = true,s2=true,s3 = true, s4 = true,s5 = true ,s6 = true;
         int []arr={count1,count2,count3,count4,count5,count6,count7,count8};
         String[] SelectionTypes = {"Doctor","Patient", "Employee","Admin","exit"};
             while (status)
 
             {
+                boolean log=false;
                 String SelectionType = (String) JOptionPane.showInputDialog(null, "Select User:",
                         "Hospital Management System", JOptionPane.QUESTION_MESSAGE, null, SelectionTypes, SelectionTypes[0]);
                 if (SelectionType.equals("Doctor"))
@@ -516,9 +517,6 @@ public class HospitalManagement
                         {
                             if (user.equals(d[j].did)&&pass.equals(d[j].dpassword)){
                                 log=true;
-                            }
-                            else{
-                                log=false;
                             }
                         }
                     }if (log) {
@@ -598,9 +596,6 @@ public class HospitalManagement
                             if (user.equals(p[j].pid)&&pass.equals(p[j].ppassword)){
                                 log=true;
                             }
-                            else{
-                                log=false;
-                            }
                         }
                     }if (log) {
                     JOptionPane.showMessageDialog(null, "Login successful!");
@@ -675,9 +670,6 @@ public class HospitalManagement
                         {
                             if (user.equals(s[j].eid)&&pass.equals(s[j].epassword)){
                                 log=true;
-                            }
-                            else{
-                                log=false;
                             }
                         }
                     }if (log) {
@@ -854,9 +846,6 @@ public class HospitalManagement
                     String pass = JOptionPane.showInputDialog("Enter your password:");
                             if (user.equals(Aid) && pass.equals(Apassword)) {
                                 log = true;
-                            }
-                            else{
-                                log=false;
                             }
                     if (log) {
                         JOptionPane.showMessageDialog(null, "Login successful!");
